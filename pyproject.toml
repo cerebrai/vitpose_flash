@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "vitpose-flash"
+version = "0.1.0"
+description = ""
+authors = ["Safwan Khalid <safwan@movrs.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.5.1"
+torchvision = "^0.20.1"
+torch-tensorrt = "^2.5.0"
+opencv-python = "^4.10.0.84"
+tqdm = "^4.67.1"
+matplotlib = "^3.10.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
