@@ -1,0 +1,1 @@
+from vitpose_flash.onepose.models.vitpose.model import ViTPose
