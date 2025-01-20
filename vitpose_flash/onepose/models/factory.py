@@ -175,7 +175,7 @@ class Model(nn.Module):
 
         # Forward pass
         out = self.model(batch_tensor)
-        out = out.cpu().numpy()#.astype(np.float32)
+        out = out.cpu().numpy()
 
         # Process each image's predictions
         centers = [_box2cs(self.model_cfg.data_cfg['image_size'],

@@ -56,15 +56,6 @@ def benchmark(inputs: List):
     print(f"Average runtime of the standard VitPose Large: {runtime * 1000} ms")
     print(f"# {'-' * 40}")
 
-    # --- VITPose runtime with float16 precision and flash attention---#
-    print("# -- Vitpose+ Large with float16 precision and flash attention")
-    model = onepose.create_model('ViTPose+_large_coco_wholebody',
-                                dtype=torch.float16,
-                                flash_attention=True).cuda()
-    runtime = get_runtime(model, inputs)
-    print(f"Average runtime of the VitPose Large with float16 precision and flash attention: {runtime * 1000} ms")
-    print(f"# {'-' * 40}")
-
     # --- VITPose runtime with float16 precision---#
     print("# -- Vitpose+ Large with float16 precision")
     model = onepose.create_model('ViTPose+_large_coco_wholebody',
