@@ -8,7 +8,7 @@
 2. **Flash attention**: Uses more efficient attention mechanisms to enhance the model's performance.
 3. **TensorRT backend**: Compiles the model using NVIDIA's TensorRT for optimized inference on supported hardware.
 
-The details can be found in the medium article: (article to be added)
+The details can be found in the medium article: [From VITPose to VITPose-Flash](https://medium.com/@safwan.comsats/from-vitpose-to-vitpose-flash-099b6dfb14f6)
 
 For detailed documentation of the original `OnePose` project, refer to the [OnePose repository](https://github.com/developer0hye/onepose).
 
@@ -62,6 +62,14 @@ For users who prefer `pip`, a `requirements.txt` file is provided. It can be gen
    ```
 
 ### Notes regarding TensorRT compile
+Compiling using TensorRT can take some time and resources. To store the compiled checkpoint for later usage, specify a path when creating the model as follows:
+```python
+model = onepose.create_model('ViTPose+_large_coco_wholebody',
+                                compile_flag=True,
+                                compiled_checkpoint_path="<Path-to-store-the-compiled-checkpoint>"
+                                compile_batch_size=len(inputs)).cuda()
+```
+If the compiled checkpoint already exists, it will be loaded from the path; otherwise, a compiled checkpoint will be stored at the specified path. 
 
 ---
 
