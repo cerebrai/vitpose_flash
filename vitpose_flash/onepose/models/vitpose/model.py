@@ -23,7 +23,7 @@ class ViTPose(nn.Module):
         if flash_attention:
             torch.backends.cuda.enable_flash_sdp(True)
             torch.backends.cuda.enable_math_sdp(False)
-            torch.backends.cuda.enable_mem_efficient_sdp(True)
+            torch.backends.cuda.enable_mem_efficient_sdp(False)
 
         self.backbone = ViT(**backbone_cfg, flash_attention=flash_attention).to(self.dtype)
         self.keypoint_head = TopdownHeatmapSimpleHead(**head_cfg).to(self.dtype)
