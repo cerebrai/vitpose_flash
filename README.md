@@ -42,7 +42,7 @@ For users who prefer `pip`, a `requirements.txt` file is provided. It can be gen
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/vitpose_flash.git
+   git clone https://github.com/cerebrai/vitpose_flash.git
    cd vitpose_flash
    ```
 2. Create a Python 3.10 environment using Conda:
