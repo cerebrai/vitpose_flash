@@ -24,7 +24,7 @@ To install Poetry, follow the official [installation guide](https://python-poetr
 ### Using Poetry
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/vitpose_flash.git
+   git clone https://github.com/cerebrai/vitpose_flash.git
    cd vitpose_flash
    ```
 2. Create a Python 3.10 environment using Conda:
